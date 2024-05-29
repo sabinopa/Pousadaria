@@ -12,10 +12,11 @@
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <%= current_inn_owner.email %>
           </a>
+          <%= link_to 'Criar Reserva', new_inn_dashboard_inns_booking_path %><>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="#">Meu Perfil</a></li>
             <li><hr class="dropdown-divider"></li>
-            
+
             <li><%= button_to 'Sair', destroy_inn_owner_session_path, { method: :delete,  class: 'dropdown-item', form: { "data-turbo": false } } %></li>
           </ul>
         </li>
