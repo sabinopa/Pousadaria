@@ -1,0 +1,25 @@
+<% if(@inn_booking.errors.any?) %>
+  <p><%= t('errors.messages.verify_error') %></p>
+  <ul>
+    <% @inn_booking.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<h1>Criar nova reserva</h1>
+<%= render partial: 'shared/record_errors', locals: { record: @inn_booking } %>
+<%= form_with(model: @inn_booking, url: new_inn_dashboard_inns_inn_bookings_path) do |f| %>
+  <div class="mb-3">
+    <%= f.label :name, class: "form-label" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="mb-3">
+    <%= f.label :start_date, class: "form-label" %>
+    <%= f.date_field :start_date, class: "form-control" %>
+  </div>
+<div class="mb-3">
+    <%= f.label :end_date, class: "form-label" %>
+    <%= f.date_field :end_date, class: "form-control" %>
+  </div>
+  <%= f.submit "Salvar", class: 'btn btn-success' %>
+<% end %>

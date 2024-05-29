@@ -1,10 +1,10 @@
 pt-BR:
   activerecord:
     models:
-      inn: 
+      inn:
         one: Pousada
         other: Pousadas
-      inn_owner: 
+      inn_owner:
         one: Dono de Pousada
         other: Donos de Pousadas
       inn_room:
@@ -35,3 +35,7 @@ pt-BR:
         guest_limit: 'Máximo de Hóspedes'
         photo: 'Foto'
         daily_rate_cents: 'Valor Diária'
+      inn_booking:
+        name: 'Nome'
+        start_date: 'Data Início'
+        end_date: 'Data Final'

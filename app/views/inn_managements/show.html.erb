@@ -1,6 +1,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page"><%= link_to 'Gestão de Pousadas', inn_management_path %></li>
+    <li class="breadcrumb-item active" aria-current="page"><%= link_to 'Criar Reserva', new_inn_dashboard_inns_inn_bookings_path %></li>
   </ol>
 </nav>
 <% if inn_owner_signed_in? %>
@@ -13,7 +14,7 @@
     <div class="row my-3">
     <% @inn.inn_rooms.each do |room| %>
       <div class="col-4">
-        <div class="card"> 
+        <div class="card">
           <% if room.photo.attached? %>
             <%= image_tag room.photo, class: 'card-img-top' %>
           <% else %>
