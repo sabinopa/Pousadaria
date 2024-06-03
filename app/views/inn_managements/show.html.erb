@@ -1,10 +1,11 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item active" aria-current="page"><%= link_to 'Gestão de Pousadas', inn_management_path %></li>
-    <li class="breadcrumb-item active" aria-current="page"><%= link_to 'Criar Reserva', new_inn_dashboard_inns_inn_bookings_path %></li>
   </ol>
 </nav>
 <% if inn_owner_signed_in? %>
+  <%= link_to 'Criar Reserva', new_inn_dashboard_inns_inn_bookings_path %>
+  <%= link_to 'Ver Reservas', inn_dashboard_inns_inn_bookings_path %>
   <h1><%= @inn.name %></h1>
   <p class="lead">CNPJ: <%= @inn.registration_number %></p>
   <p class="lead">Endereço: <%= @inn.full_address %></p>
